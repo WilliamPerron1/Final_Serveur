@@ -1,1 +1,25 @@
-<h1>je suis une page de game</h1>
+<h1>je suis une page de profil</h1>
+
+<h2>Game jouer en tant que creator</h2>
+<%for game in @games_create do %>
+    <ul>
+        <li>
+        <p><%=game.game_data%></p>
+        </li>
+    </ul>
+<%end%>
+
+<h2>Game jouer en tant que opponent</h2>
+<%for game in @games_played do %>
+    <ul>
+        <li>
+        <p><%=game.game_data%></p>
+        </li>
+    </ul>
+<%end%>
+
+<h3>Commencer une partie</h3>
+<a href="/startgame">Start</a>
+
+<h3>LogOut</h3>
+<%= button_to "Log out", destroy_user_session_path, method: :delete %>

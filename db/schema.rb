@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_11_15_155225) do
 
   create_table "games", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "creator_id", null: false
-    t.bigint "opponent_id", null: false
+    t.bigint "opponent_id"
     t.bigint "winner_id"
     t.bigint "player_turn_id"
     t.text "game_data"

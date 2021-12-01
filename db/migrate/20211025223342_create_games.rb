@@ -2,7 +2,7 @@ class CreateGames < ActiveRecord::Migration[6.1]
   def change
     create_table :games do |t|
       t.belongs_to :creator, null: false
-      t.belongs_to :opponent, null: false
+      t.belongs_to :opponent
       t.belongs_to :winner
       t.belongs_to :player_turn
       t.text :game_data

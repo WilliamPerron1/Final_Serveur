@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get '/game', to: 'game#index'
+  get '/startgame', to: 'game#created'
 
 end
