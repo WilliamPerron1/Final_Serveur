@@ -1,0 +1,19 @@
+<h1>Edit profil</h1>
+<%= form_with url: "/editprofil", method: :post do |form| %>
+
+    <%= form.label :query, "email" %>
+
+    <%= form.text_field :email, :value => @user.email %>
+
+    <br/><br/>
+    
+    <%= form.label :query, "Password" %>
+
+    <%= form.password_field  :password %>
+
+    <br /> <br />
+
+    <%= form.submit "send" %>
+    
+
+<% end %>

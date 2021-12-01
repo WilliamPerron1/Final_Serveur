@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   get '/game', to: 'game#index'
   get '/startgame', to: 'game#created'
+  get '/editprofil', to: 'game#formedit'
+  post '/editprofil', to: 'game#editprofil'
 
 end
